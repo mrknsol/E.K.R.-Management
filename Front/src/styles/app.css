@@ -865,3 +865,22 @@ h3,
     transition: none !important;
   }
 }
+
+
+.form-grid-2,
+.form-grid-3 { display: grid; gap: 12px; }
+.form-grid-2 { grid-template-columns: 1fr 1fr; }
+.form-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.checkbox-row { display: flex !important; flex-direction: row !important; align-items: center; gap: 10px; }
+.checkbox-row input { width: auto !important; }
+.order-tags { display: flex; gap: 8px; margin-top: 8px; }
+.source-pill {
+  display: inline-flex; align-items: center; padding: 3px 8px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; border: 2px solid var(--ink);
+}
+.source-pill.website { background: #d8f3dc; }
+.source-pill.manual { background: #f4e8d8; }
+@media (max-width: 720px) {
+  .form-grid-2, .form-grid-3 { grid-template-columns: 1fr; }
+}

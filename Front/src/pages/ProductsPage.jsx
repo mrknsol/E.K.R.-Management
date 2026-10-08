@@ -89,10 +89,15 @@ export function ProductsPage() {
                 )}
               </div>
               <div className="product-body">
-                <h3>{p.modelName}</h3>
+                <h3>{p.modelName}<span className="muted" style={{ marginLeft: 8, fontWeight: 400 }}>{p.code}</span></h3>
                 <p className="muted">{p.description || t('noDescription')}</p>
                 <div className="stock-total">
                   {t('totalStock')} · {p.totalStock} {t('pcs')}
+                  {p.isPublished ? (
+                    <span className="source-pill website" style={{ marginLeft: 10 }}>{t('onWebsite')}</span>
+                  ) : (
+                    <span className="source-pill manual" style={{ marginLeft: 10 }}>{t('warehouseOnly')}</span>
+                  )}
                 </div>
                 <div className="variant-list">
                   {p.variants.map((v) => (

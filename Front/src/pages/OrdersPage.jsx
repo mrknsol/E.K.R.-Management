@@ -95,6 +95,11 @@ export function OrdersPage({ monitor = false }) {
                   <p className="muted">
                     {order.customerName} · {t('createdBy')} {order.createdBy}
                   </p>
+                  <div className="order-tags">
+                    <span className={`source-pill ${order.source === 1 ? 'website' : 'manual'}`}>
+                      {order.source === 1 ? t('sourceWebsite') : t('sourceManual')}
+                    </span>
+                  </div>
                 </div>
                 <span className={`stamp status-${order.status}`}>
                   {statusLabel(order.status)}
