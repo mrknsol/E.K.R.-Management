@@ -103,7 +103,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var corsOrigins = builder.Configuration["Cors:Origins"]
     ?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-    ?? ["http://localhost:5173", "http://127.0.0.1:5173", "https://e-k-r-management.onrender.com"];
+    ?? ["http://localhost:5173", "http://127.0.0.1:5173", "https://e-k-r-management.vercel.app"];
 
 builder.Services.AddCors(options =>
 {
