@@ -47,7 +47,8 @@ public static class DbSeeder
                     new ProductVariant { Color = "Black", Size = "M", StockQuantity = 50 },
                     new ProductVariant { Color = "Black", Size = "L", StockQuantity = 40 },
                     new ProductVariant { Color = "Navy", Size = "M", StockQuantity = 35 },
-                    new ProductVariant { Color = "Navy", Size = "L", StockQuantity = 30 }
+                    new ProductVariant { Color = "Navy", Size = "L", StockQuantity = 30 },
+                    new ProductVariant { Color = "NavyBlue", Size = "M", StockQuantity = 25 },
                 ]
             });
             await db.SaveChangesAsync();
